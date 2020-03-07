@@ -8,9 +8,9 @@ function Weather (props){
 					{props.city}, {props.country}
 				</h1>
 			</div>
-			<div>{props.temp_celsius} degrees</div>
+			<p>{props.temp_celsius} degrees</p>
 			<div>{minmaxTemp(props.temp_min, props.temp_max)}</div>
-			<div>{props.description}</div>
+			<p>{props.description}</p>
 		</div>
 	);
 }
@@ -18,8 +18,8 @@ function Weather (props){
 function minmaxTemp (min, max){
 	return (
 		<h3>
-			<span>{min} </span>
-			<span>{max} </span>
+			<span>Max temp: {min} </span><br/>
+			<span>Min temp: {max} </span>
 		</h3>
 	);
 }
